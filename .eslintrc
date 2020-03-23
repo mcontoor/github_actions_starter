@@ -1,0 +1,10 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "no-trailing-spaces": "warn",
+      "comma-dangle": "off",
+      "quotes": ["warn", "single"],
+      "semi": "warn"
+    }
+  }
