@@ -26,6 +26,7 @@ jobs:
       run: npm install
       env:
           CI: "TRUE"
+    - uses: actions/checkout@v1
     - name: Save Code Linting Report JSON
       run: npm run lint
       continue-on-error: true
