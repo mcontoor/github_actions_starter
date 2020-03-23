@@ -17,6 +17,6 @@ rules:
   {
     "no-trailing-spaces": "warn",
     "comma-dangle": "off",
-    "quotes": ["warn", "single"],
+    "quotes": ["error", "single"],
     "semi": "warn",
   }
