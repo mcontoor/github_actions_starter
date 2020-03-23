@@ -21,18 +21,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Install Node Dependencies
-        run: npm install
-        env:
+    - uses: actions/checkout@v1
+    - name: installl node
+      run: npm install
+      env:
           CI: "TRUE"
-      - name: Save Code Linting Report JSON
-        # npm script for ESLint
-        # eslint --output-file eslint_report.json --format json src
-        # See https://eslint.org/docs/user-guide/command-line-interface#options
-        run: npm run lint
-        # Continue to the next step even if this fails
-        continue-on-error: true
+    - name: Save Code Linting Report JSON
+      run: npm run lint
+      continue-on-error: true
+    - with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
 
