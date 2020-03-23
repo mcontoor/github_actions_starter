@@ -1,1 +1,2 @@
-console.log('asdasdsad')
+console.log('asdasdsad');
+console.log('asd')
