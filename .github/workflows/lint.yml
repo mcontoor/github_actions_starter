@@ -22,13 +22,9 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v1
-    - name: installl node
-      run: npm install
-    - uses: actions/checkout@v2
-    - name: Save Code Linting Report JSON
-      run: npm run lint
+    - name: Run a multi-line script
+      run: |
+        npm install
+        npm run lint
       continue-on-error: true
-    - with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
 
